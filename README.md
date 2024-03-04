@@ -9,9 +9,15 @@ appointments. The patient will call the voice bot to schedule an appointment wit
 the doctor.
 
 ## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your_username/project_name.git
+1. Clone the repository
+
+2. Setup virtual environment
+   python3.11 -m venv venv
+
+3. Activate venv
+   source venv/bin/activate
+
+4. pip install -r requirements.txt
 
 ## Voice Recognition
 This project uses AssemblyAI for voice recognition. You will need to sign up for an account and obtain an API key. Once you have the API key, add it to the configuration file or set it as an environment variable.
