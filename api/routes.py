@@ -76,6 +76,15 @@ async def book_appointment(file: UploadFile = File(...)):
 
     print(text, "test")
 
+    if text is None:
+        return {
+            "transcription": "...", 
+            "result_audio_path": f"{settings.base_url}/audios/notablehear.mp3",
+            "booking_result": {
+                "message": 'Sorry, I\'m was not able to hear you clearly.'
+            }
+        }
+
     # Process the transcribed text and check booking intent
     result = check_booking_intent(transcript.text)
 

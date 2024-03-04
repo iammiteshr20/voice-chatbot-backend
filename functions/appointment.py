@@ -21,6 +21,8 @@ def check_booking_intent(user_input):
     time_regex = re.compile(r'\d{1,2}:\d{2}\s*(?:AM|PM|am|pm|p.m.|p.m|a.m.|a.m)?')
     
     user_input = user_input.lower()
+
+    print(user_input, "here")
     
     # Check if input contains booking-related keywords
     booking_mentioned = any(keyword in user_input for keyword in booking_keywords)
